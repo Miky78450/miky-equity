@@ -1,0 +1,47 @@
+export const metadata = {
+  title: "Pourquoi le NQ Futures est notre instrument de prédilection",
+  date: "2026-03-18",
+  category: "Stratégie",
+  summary:
+    "Le Nasdaq-100 Futures concentre liquidité, volatilité et structure de marché ICT dans un seul instrument. Décryptage de nos critères de sélection.",
+  readTime: "7 min",
+};
+
+# Pourquoi le NQ Futures est notre instrument de prédilection
+
+Le choix de l'instrument est une décision stratégique fondamentale. Chez Miky Equity, nous avons consacré les premières années à tester une dizaine de futures — ES, YM, CL, GC, 6E — avant de concentrer notre allocation sur le **NQ Futures** (Nasdaq-100 E-mini). Ce n'est pas un hasard.
+
+## Liquidité et profondeur de carnet
+
+Le NQ figure parmi les contrats futures les plus liquides au monde, avec un volume journalier dépassant régulièrement les **800 000 contrats**. Cette profondeur garantit une exécution propre même sur des tailles institutionnelles, sans slippage significatif. La bid-ask spread reste systématiquement à 1 tick ($5 par contrat MNQ, $20 par NQ), ce qui en fait un des instruments les moins coûteux à trader en termes de friction.
+
+## Structure de marché ICT exemplaire
+
+La méthodologie ICT (*Inner Circle Trader*) repose sur la lecture de la structure de marché : cassures de swing, zones de liquidité, Fair Value Gaps. Le NQ exhibe ces structures avec une **clarté remarquable** pour deux raisons :
+
+- **Concentration institutionnelle** : les grands acteurs (market makers, hedge funds) opèrent massivement sur l'indice tech, créant des ordres clairs et tracables.
+- **Corrélation avec le Dollar Index** : la relation inverse NQ/DXY offre un filtre de biais directionnel fiable, absent sur d'autres instruments.
+
+---
+
+> "Un bon instrument ne crée pas un bon trader — mais un mauvais instrument peut détruire même un bon setup."
+
+---
+
+## Sessions et kill zones
+
+Nos deux fenêtres de trading — **London Kill Zone (7h00–10h00 GMT)** et **New York Kill Zone (13h30–16h00 GMT)** — correspondent aux heures de forte liquidité du NQ. Les Fair Value Gaps créés pendant ces sessions ont une probabilité de comblement historiquement supérieure à 70% dans notre backtest sur 8 ans.
+
+## Levier et taille de position
+
+Le NQ Futures offre un levier naturel via le micro-contrat (**MNQ, $2 × indice**) qui permet un sizing précis à 0.25R près. Notre règle de risque de 1% par trade se traduit en nombre de MNQ calculé dynamiquement selon :
+
+```
+Contrats = (Capital × 0.01) / (Stop en points × $2)
+```
+
+Cette granularité est impossible à atteindre avec un ETF ou un CFD soumis à des contraintes réglementaires.
+
+## Conclusion
+
+Le NQ n'est pas *facile* — sa volatilité intrinsèque exige discipline et rigueur. Mais c'est précisément cette volatilité, canalisée par une méthodologie structurée, qui génère les opportunités asymétriques que nous recherchons : un win rate de **59.3%** sur 1607 trades avec un Sharpe de 3.20 en témoigne.

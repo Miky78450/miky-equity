@@ -1,0 +1,64 @@
+export const metadata = {
+  title: "Anatomie d'un Fair Value Gap en Kill Zone",
+  date: "2026-02-05",
+  category: "Analyse technique",
+  summary:
+    "Le Fair Value Gap est le setup fondateur de notre approche ICT. Comment l'identifier, le qualifier et l'exploiter avec un R:R systématiquement supérieur à 1:3.",
+  readTime: "9 min",
+};
+
+# Anatomie d'un Fair Value Gap en Kill Zone
+
+Le **Fair Value Gap** (FVG) est l'un des concepts les plus puissants de la méthodologie ICT — et l'un des plus mal compris. Il ne s'agit pas simplement d'un "gap" au sens chartiste du terme, mais d'une zone d'inefficacité de prix créée par un déséquilibre entre acheteurs et vendants lors d'un mouvement impulsionnel.
+
+## Définition précise
+
+Un FVG se forme sur trois bougies consécutives :
+
+1. **Bougie 1** — corps quelconque
+2. **Bougie 2** — corps impulsionnel (la "mèche motrice")
+3. **Bougie 3** — corps quelconque dont l'ombre **ne recouvre pas** entièrement la zone entre le high de la bougie 1 et le low de la bougie 3
+
+La zone comprise entre **le high de la bougie 1** et **le low de la bougie 3** constitue le FVG. C'est dans cette zone que le prix reviendra potentiellement chercher de la liquidité.
+
+### FVG haussier vs. baissier
+
+| Type | Condition | Zone | Entrée attendue |
+|---|---|---|---|
+| Haussier (BISI) | Bougie 2 haussière | High B1 → Low B3 | Retour dans la zone, long |
+| Baissier (SIBI) | Bougie 2 baissière | Low B1 → High B3 | Retour dans la zone, short |
+
+## Le filtre Kill Zone
+
+Un FVG isolé n'a qu'une valeur limitée. Sa puissance décuple lorsqu'il se forme — ou qu'il est revisité — pendant une **Kill Zone** :
+
+- **London Kill Zone** : 07:00–10:00 GMT — coincide avec l'ouverture européenne et le déplacement liquide post-Asia range
+- **New York Kill Zone** : 13:30–16:00 GMT — coïncide avec l'ouverture US et le volume institutionnel maximum
+
+> Notre règle interne : un FVG est qualifié seulement si sa formation ou son retour se produit dans ces deux fenêtres temporelles. Hors kill zone, le taux d'échec triple.
+
+## Qualification du FVG
+
+Tous les FVGs ne se valent pas. Nos critères de qualification :
+
+1. **Alignement avec la structure de marché** — le FVG doit être dans le sens de la tendance du timeframe supérieur (H4 ou journalier)
+2. **Proximité d'un Point of Interest** — le FVG doit se trouver à l'intérieur ou adjacent à un Order Block, un niveau de liquidité ou un Old High/Low
+3. **Taille minimale** — le gap doit représenter au moins **0.15%** du prix courant pour éviter le bruit de marché
+
+## Entrée et gestion de position
+
+Une fois le FVG qualifié et le prix en retour dans la zone :
+
+- **Entrée** : au 50% de la zone FVG (le "Consequent Encroachment")
+- **Stop** : sous le bas de la zone FVG + 0.1% de marge
+- **Cible** : prochain Point of Interest — typiquement un Old High/Low ou la liquidité côté opposé
+
+Ce sizing donne un **R:R minimum de 1:2.5** sur la majorité de nos setups, avec des outliers à 1:8 lors des grandes sessions de tendance.
+
+## Ce que dit notre backtest
+
+Sur 1607 trades de 2018 à 2026, les setups FVG en Kill Zone représentent **67% de notre volume** et concentrent **78% de notre performance nette**. Ce déséquilibre confirme l'alpha structurel de ce setup spécifique par rapport aux autres entrées ICT testées.
+
+---
+
+La maîtrise du FVG n'est pas une question de compréhension intellectuelle — c'est une question de *lecture* : savoir voir l'inefficacité avant qu'elle soit comblée, et agir avec conviction quand toutes les conditions convergent.

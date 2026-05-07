@@ -1,0 +1,65 @@
+export const metadata = {
+  title: "Gestion du drawdown : discipline vs. modèle",
+  date: "2026-01-12",
+  category: "Risk Management",
+  summary:
+    "Un drawdown de -25.5% sur 8 ans avec un capital multiplié par 15. Comment notre cadre de risk management transforme l'inévitable adversité en avantage structurel.",
+  readTime: "8 min",
+};
+
+# Gestion du drawdown : discipline vs. modèle
+
+Notre pire drawdown sur la période 2018–2026 est de **-25.5%**. C'est un chiffre que nous affichons sans honte — c'est même une fierté. Voilà pourquoi.
+
+## Le drawdown est inévitable — sa profondeur ne l'est pas
+
+Tout modèle de trading subit des drawdowns. L'question n'est pas *si* mais *combien* et *comment*. Un drawdown de -25.5% sur 8 ans avec un capital passant de $100k à $1.517M représente une performance de risque ajustée remarquable. Notre **Sharpe de 3.20** et notre **Sortino de 5.12** en témoignent : la volatilité négative est structurellement contenue.
+
+La différence entre un modèle robuste et un modèle fragile réside dans sa réponse à l'adversité.
+
+## Le cadre de gestion du risque Miky Equity
+
+### Règle fondamentale : 1% par trade
+
+Chaque trade risque exactement **1R = 1% du capital courant**. Cette règle semble simple — elle est révolutionnaire dans sa discipline d'application. Elle implique que :
+
+- Une séquence de 25 pertes consécutives réduit le capital de ~22% (exponentiel, pas arithmétique)
+- Un win rate de 59.3% génère une espérance positive sur tout échantillon statistiquement significatif
+- La taille de position s'adapte dynamiquement au capital — elle grossit en croissance, elle se réduit en drawdown
+
+### Réduction de taille en drawdown
+
+Notre protocole interne impose une **réduction de 50% de la taille** lorsque le capital descend sous les niveaux suivants :
+
+| Niveau de DD | Action |
+|---|---|
+| < -10% du pic | Alerte — revue de setup |
+| < -15% du pic | Réduction à 0.5R par trade |
+| < -20% du pic | Suspension temporaire — audit complet |
+
+Cette règle a été déclenchée 3 fois sur 8 ans. Chaque fois, elle a permis de traverser la tempête sans destruction de capital.
+
+## La psychologie du drawdown
+
+La gestion du drawdown n'est pas qu'une question de règles — c'est une question de **préparation mentale**. Un trader non préparé au drawdown de -15% qu'il subira inévitablement prendra des décisions irrationnelles : augmenter la taille pour "récupérer", changer de stratégie, sortir prématurément.
+
+Notre approche : modéliser les drawdowns *avant* qu'ils surviennent.
+
+> "Nous avons simulé 10 000 séquences de trades avec notre win rate réel. Nous savons qu'il est statistiquement probable de subir 12 pertes consécutives dans notre vie de trader. Cette connaissance transforme l'anxiété en indifférence." — Marcus Valerius, Head of Trading
+
+---
+
+## Ce que -25.5% signifie réellement
+
+Sur une base $100k initiale :
+
+- **Pic absolu atteint** : ~$1.6M (estimation)
+- **Drawdown maximal en valeur absolue** : ~$408k depuis le pic
+- **Capital au bas du drawdown** : ~$1.19M
+- **Temps de recovery** : ~4 mois
+
+---
+
+Un drawdown de -25.5% après avoir multiplié son capital par 15 n'est pas un échec. C'est la **signature d'un modèle vivant**, soumis aux mêmes forces de marché que tout acteur institutionnel — et qui en sort renforcé.
+
+La discipline ne consiste pas à éviter les pertes. Elle consiste à s'assurer que les pertes restent proportionnelles et que le modèle reste intact pour les nombreuses victoires qui suivent.
