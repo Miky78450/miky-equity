@@ -1,6 +1,6 @@
 interface BacktestMonth {
   date: string;
-  monthly_r: number;
+  monthlyReturn: number;
 }
 
 interface Props {
@@ -44,7 +44,8 @@ function buildRows(data: BacktestMonth[]): YearRow[] {
     const monthIdx = parseInt(parts[1] as string) - 1;
     if (!byYear[year]) byYear[year] = Array(12).fill(null) as null[];
     const row = byYear[year];
-    if (row) row[monthIdx] = d.monthly_r;
+    // monthlyReturn is a decimal (e.g. 0.0691 = 6.91%) — multiply by 100 for display
+    if (row) row[monthIdx] = d.monthlyReturn * 100;
   }
 
   return Object.keys(byYear)
@@ -52,6 +53,7 @@ function buildRows(data: BacktestMonth[]): YearRow[] {
     .map((year) => {
       const months: (number | null)[] =
         byYear[year] ?? (Array(12).fill(null) as null[]);
+      // YTD = compound of actual monthly % returns
       let ytdFactor = 1;
       for (const v of months) {
         if (v !== null) ytdFactor *= 1 + v / 100;
