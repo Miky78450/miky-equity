@@ -34,7 +34,7 @@ export default function AnalysesPage() {
       {/* Header */}
       <div className="mb-20 max-w-2xl">
         <Eyebrow className="mb-6">Insights</Eyebrow>
-        <SectionHeading className="mb-6">
+        <SectionHeading as="h1" className="mb-6">
           Notes de marché & recherche
         </SectionHeading>
         <p className="text-body-lg text-muted-foreground">

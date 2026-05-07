@@ -23,6 +23,7 @@ function stddev(arr: number[], avg?: number): number {
 
 /** CAGR from $100k initial to last equity value */
 export function calcCAGR(data: BacktestMonth[]): number {
+  if (data.length === 0) return 0;
   const final = data[data.length - 1].equity;
   const years = data.length / 12;
   return Math.pow(final / INITIAL_CAPITAL, 1 / years) - 1;
@@ -30,12 +31,14 @@ export function calcCAGR(data: BacktestMonth[]): number {
 
 /** Annualized volatility: std dev of monthly returns * sqrt(12) */
 export function calcAnnualizedVolatility(data: BacktestMonth[]): number {
+  if (data.length === 0) return 0;
   const returns = data.map((d) => d.monthlyReturn);
   return stddev(returns) * Math.sqrt(12);
 }
 
 /** Sharpe ratio (risk-free rate = 0) */
 export function calcSharpe(data: BacktestMonth[]): number {
+  if (data.length === 0) return 0;
   const returns = data.map((d) => d.monthlyReturn);
   const avgMonthly = mean(returns);
   const vol = calcAnnualizedVolatility(data);
@@ -44,6 +47,7 @@ export function calcSharpe(data: BacktestMonth[]): number {
 
 /** Sortino ratio (downside deviation only) */
 export function calcSortino(data: BacktestMonth[]): number {
+  if (data.length === 0) return 0;
   const returns = data.map((d) => d.monthlyReturn);
   const avgMonthly = mean(returns);
   const negReturns = returns.filter((r) => r < 0);
@@ -67,8 +71,10 @@ export function calcMaxDrawdown(data: BacktestMonth[]): number {
 
 /** Win rate as a decimal (e.g. 0.593 = 59.3%) */
 export function calcWinRate(data: BacktestMonth[]): number {
+  if (data.length === 0) return 0;
   const totalWins = data.reduce((a, d) => a + d.wins, 0);
   const totalTrades = data.reduce((a, d) => a + d.trades, 0);
+  if (totalTrades === 0) return 0;
   return totalWins / totalTrades;
 }
 
