@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Eyebrow } from "@/components/ui/typography";
+import { TableOfContents } from "@/components/sections/TableOfContents";
 import { articleSlugs, getArticleBySlug } from "@/lib/articles";
 
 interface Props {
@@ -34,6 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${article.metadata.title} | Miky Equity`,
     description: article.metadata.summary,
+    openGraph: {
+      title: article.metadata.title,
+      description: article.metadata.summary,
+      type: "article",
+      publishedTime: article.metadata.date,
+    },
   };
 }
 
@@ -70,6 +77,7 @@ export default async function AnalyseSlugPage({ params }: Props) {
         <Link
           href="/analyses"
           className="text-label-caps text-muted-foreground hover:text-gold transition-colors"
+          aria-label="Retour à la liste des analyses"
         >
           ← Toutes les analyses
         </Link>
@@ -97,7 +105,10 @@ export default async function AnalyseSlugPage({ params }: Props) {
         </p>
 
         <div className="border-border flex items-center gap-4 border-t pt-8">
-          <div className="border-gold/30 bg-gold/20 flex h-8 w-8 items-center justify-center rounded-full border">
+          <div
+            className="border-gold/30 bg-gold/20 flex h-8 w-8 items-center justify-center rounded-full border"
+            aria-hidden="true"
+          >
             <span className="text-label-caps text-gold">ME</span>
           </div>
           <div>
@@ -105,7 +116,7 @@ export default async function AnalyseSlugPage({ params }: Props) {
               Équipe Recherche
             </p>
             <p className="text-label-caps text-muted-foreground">
-              {formatDate(metadata.date)}
+              <time dateTime={metadata.date}>{formatDate(metadata.date)}</time>
             </p>
           </div>
         </div>
@@ -114,10 +125,21 @@ export default async function AnalyseSlugPage({ params }: Props) {
       {/* Divider */}
       <div className="border-border mb-16 max-w-3xl border-t" />
 
-      {/* MDX Content */}
-      <article className="max-w-3xl">
-        <Content />
-      </article>
+      {/* Article body + TOC sidebar */}
+      <div className="flex gap-16">
+        <article
+          id="article-content"
+          className="max-w-3xl min-w-0 flex-1"
+          aria-label={metadata.title}
+        >
+          <Content />
+        </article>
+
+        {/* Floating TOC — only visible xl+ */}
+        <aside className="w-48 shrink-0" aria-label="Navigation de l'article">
+          <TableOfContents />
+        </aside>
+      </div>
 
       {/* Footer navigation */}
       <div className="border-border mt-20 max-w-3xl border-t pt-10">

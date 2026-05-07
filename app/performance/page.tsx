@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Eyebrow } from "@/components/ui/typography";
 import backtestData from "@/data/backtest.json";
+import sp500Data from "@/data/sp500.json";
 import { calcAllMetrics } from "@/lib/finance";
 import { EquityCurve } from "@/components/charts/EquityCurve";
 import { DrawdownChart } from "@/components/charts/DrawdownChart";
 import { MonthlyHeatmap } from "@/components/charts/MonthlyHeatmap";
+import { ComparisonChart } from "@/components/charts/ComparisonChart";
 
 export const metadata: Metadata = { title: "Performance" };
 
@@ -142,6 +144,22 @@ export default function PerformancePage() {
         <div className="border-border bg-surface-low col-span-12 self-center border md:col-span-7">
           <DrawdownChart data={backtestData} />
         </div>
+      </section>
+
+      {/* ── Comparaison vs S&P 500 ───────────────────────────────────────── */}
+      <section className="px-gutter border-border border-b py-16">
+        <div className="mb-8">
+          <Eyebrow className="mb-4">Analyse comparative</Eyebrow>
+          <h2 className="text-headline-md text-foreground">
+            Miky Equity vs S&amp;P 500
+          </h2>
+          <p className="text-body-md text-muted-foreground mt-3 max-w-2xl">
+            Même capital de départ ($100 000), même période (jan. 2018 – mai
+            2026). La surperformance structurelle de la stratégie ICT sur NQ
+            Futures face au benchmark actions.
+          </p>
+        </div>
+        <ComparisonChart mikyData={backtestData} sp500Data={sp500Data} />
       </section>
 
       {/* ── Méthodologie ─────────────────────────────────────────────────── */}

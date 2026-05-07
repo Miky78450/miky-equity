@@ -19,6 +19,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://miky-equity.vercel.app"),
   title: {
     default: "Miky Equity",
     template: "%s — Miky Equity",
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
   description:
     "Miky Equity — fonds de trading quantitatif spécialisé en NQ Futures via la méthodologie ICT. +1 417% sur 8.2 ans.",
   keywords: ["trading", "NQ Futures", "ICT", "quantitatif", "hedge fund"],
+  openGraph: {
+    siteName: "Miky Equity",
+    type: "website",
+    locale: "fr_FR",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

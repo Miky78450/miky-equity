@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { DisplayHeading, Eyebrow, KPINumber } from "@/components/ui/typography";
+import { DisplayHeading, Eyebrow } from "@/components/ui/typography";
+import { FadeIn, StaggerChildren, StaggerItem } from "@/components/ui/FadeIn";
+import { CountUp } from "@/components/ui/CountUp";
 
 const PHILOSOPHIES = [
   {
@@ -17,6 +19,13 @@ const PHILOSOPHIES = [
     title: "Sessions de liquidité",
     body: "Nous opérons exclusivement pendant les sessions London Kill Zone (7h–10h CET) et NY Kill Zone (14h30–16h CET), là où les flux institutionnels sont les plus concentrés.",
   },
+];
+
+const KPI_ITEMS = [
+  { label: "CAGR", value: "+39.0%" },
+  { label: "Sharpe Ratio", value: "3.20" },
+  { label: "Max Drawdown", value: "-25.5%" },
+  { label: "Historique", value: "8.2 ans" },
 ];
 
 const INSIGHTS = [
@@ -46,41 +55,62 @@ export default function Home() {
     <main className="flex-1">
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="px-gutter grid grid-cols-12 gap-4 pt-32 pb-24">
-        <div className="col-span-12 lg:col-span-9">
+        <FadeIn
+          className="col-span-12 lg:col-span-9"
+          direction="up"
+          duration={0.8}
+        >
           <DisplayHeading>
             Capital discipliné.
             <br />
             Rendements asymétriques.
           </DisplayHeading>
-        </div>
+        </FadeIn>
 
         {/* KPI Strip */}
-        <div className="border-border col-span-12 mt-12 grid grid-cols-2 gap-8 border-t pt-8 md:grid-cols-4">
-          <KPINumber label="CAGR" value="39.0%" />
-          <KPINumber label="Sharpe Ratio" value="3.20" />
-          <KPINumber label="Max Drawdown" value="-25.5%" />
-          <KPINumber label="Historique" value="8.2 ans" />
-        </div>
+        <StaggerChildren
+          className="border-border col-span-12 mt-12 grid grid-cols-2 gap-8 border-t pt-8 md:grid-cols-4"
+          baseDelay={0.3}
+          staggerDelay={0.1}
+        >
+          {KPI_ITEMS.map((kpi) => (
+            <StaggerItem key={kpi.label}>
+              <p className="text-label-caps text-muted-foreground mb-1">
+                {kpi.label}
+              </p>
+              <p className="text-headline-md text-gold tabular-nums">
+                <CountUp value={kpi.value} duration={1.6} />
+              </p>
+            </StaggerItem>
+          ))}
+        </StaggerChildren>
       </section>
 
       {/* ── Philosophie ──────────────────────────────────────────────────── */}
       <section className="px-gutter border-border bg-surface-low border-t py-32">
-        <div className="grid grid-cols-12 gap-8 lg:gap-16">
+        <StaggerChildren
+          className="grid grid-cols-12 gap-8 lg:gap-16"
+          baseDelay={0}
+          staggerDelay={0.15}
+        >
           {PHILOSOPHIES.map((p) => (
-            <div key={p.num} className="col-span-12 lg:col-span-4">
+            <StaggerItem key={p.num} className="col-span-12 lg:col-span-4">
               <Eyebrow className="mb-6">PHILOSOPHIE {p.num}</Eyebrow>
               <h3 className="text-headline-md text-foreground mb-5">
                 {p.title}
               </h3>
               <p className="text-body-lg text-muted-foreground">{p.body}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerChildren>
       </section>
 
       {/* ── Equity Curve Preview ─────────────────────────────────────────── */}
       <section className="px-gutter border-border grid grid-cols-12 items-center gap-8 border-t py-32">
-        <div className="col-span-12 mb-12 lg:col-span-5 lg:mb-0">
+        <FadeIn
+          className="col-span-12 mb-12 lg:col-span-5 lg:mb-0"
+          direction="left"
+        >
           <Eyebrow className="mb-4">Performance cumulée</Eyebrow>
           <h3 className="text-headline-lg text-foreground mb-8">
             Surperformer les indices à travers les cycles.
@@ -95,13 +125,18 @@ export default function Home() {
           >
             Voir la performance complète
           </Link>
-        </div>
+        </FadeIn>
 
-        <div className="border-border relative col-span-12 h-[360px] border p-6 lg:col-span-7">
+        <FadeIn
+          className="border-border relative col-span-12 h-[360px] border p-6 lg:col-span-7"
+          direction="right"
+          delay={0.15}
+        >
           <svg
             className="h-full w-full"
             viewBox="0 0 1000 320"
             preserveAspectRatio="none"
+            aria-hidden="true"
           >
             <defs>
               <linearGradient id="equityGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -120,7 +155,10 @@ export default function Home() {
               fill="url(#equityGrad)"
             />
           </svg>
-          <div className="absolute right-6 bottom-3 left-6 flex justify-between">
+          <div
+            className="absolute right-6 bottom-3 left-6 flex justify-between"
+            aria-hidden="true"
+          >
             <span className="text-muted-foreground text-[9px] tracking-widest">
               JAN 2018
             </span>
@@ -137,12 +175,12 @@ export default function Home() {
               MAI 2026
             </span>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* ── Analyses récentes ────────────────────────────────────────────── */}
       <section className="px-gutter bg-surface-low border-border border-t py-32">
-        <div className="mb-16 flex items-end justify-between">
+        <FadeIn className="mb-16 flex items-end justify-between">
           <h3 className="text-headline-lg text-foreground">
             Analyses de
             <br />
@@ -154,27 +192,34 @@ export default function Home() {
           >
             Voir toutes les analyses
           </Link>
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-12 gap-8">
+        <StaggerChildren
+          className="grid grid-cols-12 gap-8"
+          staggerDelay={0.12}
+        >
           {INSIGHTS.map((article) => (
-            <Link
+            <StaggerItem
               key={article.slug}
-              href={`/analyses/${article.slug}`}
-              className={`group col-span-12 cursor-pointer lg:col-span-4 ${article.offset}`}
+              className={`col-span-12 lg:col-span-4 ${article.offset}`}
             >
-              <div className="bg-surface-high border-border relative mb-6 aspect-[4/5] overflow-hidden border">
-                <div className="to-surface-high/50 absolute inset-0 bg-gradient-to-b from-transparent" />
-              </div>
-              <span className="text-label-caps text-gold mb-3 block">
-                {article.category}
-              </span>
-              <h4 className="font-heading text-foreground group-hover:text-gold text-[26px] leading-tight font-light transition-colors duration-300">
-                {article.title}
-              </h4>
-            </Link>
+              <Link
+                href={`/analyses/${article.slug}`}
+                className="group block cursor-pointer"
+              >
+                <div className="bg-surface-high border-border relative mb-6 aspect-[4/5] overflow-hidden border">
+                  <div className="to-surface-high/50 absolute inset-0 bg-gradient-to-b from-transparent" />
+                </div>
+                <span className="text-label-caps text-gold mb-3 block">
+                  {article.category}
+                </span>
+                <h4 className="font-heading text-foreground group-hover:text-gold text-[26px] leading-tight font-light transition-colors duration-300">
+                  {article.title}
+                </h4>
+              </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerChildren>
       </section>
     </main>
   );
