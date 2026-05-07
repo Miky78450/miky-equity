@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui/typography";
+import { PortfolioFilters } from "@/components/sections/PortfolioFilters";
 import portfolioData from "@/data/portfolio.json";
 
 export const metadata: Metadata = { title: "Portefeuille" };
@@ -17,7 +18,27 @@ const SECTOR_BG: Record<string, string> = {
   "aether-analytics": "bg-[#0a1618]",
 };
 
-export default function PortefeuillePage() {
+interface SearchParams {
+  secteur?: string;
+  statut?: string;
+  vintage?: string;
+}
+
+interface Props {
+  searchParams: Promise<SearchParams>;
+}
+
+export default async function PortefeuillePage({ searchParams }: Props) {
+  const { secteur, statut, vintage } = await searchParams;
+
+  // Filter server-side based on URL params
+  const filtered = portfolioData.filter((c) => {
+    if (secteur && c.sector !== secteur) return false;
+    if (statut && c.status !== statut) return false;
+    if (vintage && c.vintage !== Number(vintage)) return false;
+    return true;
+  });
+
   const avgMOIC = (
     portfolioData.reduce((s, c) => s + c.moic, 0) / portfolioData.length
   ).toFixed(2);
@@ -53,76 +74,93 @@ export default function PortefeuillePage() {
         </div>
       </section>
 
+      {/* ── Filters ───────────────────────────────────────────────────────── */}
+      <section className="px-gutter">
+        <PortfolioFilters
+          currentSector={secteur ?? null}
+          currentStatus={statut ?? null}
+          currentVintage={vintage ?? null}
+          totalResults={filtered.length}
+          totalAll={portfolioData.length}
+        />
+      </section>
+
       {/* ── Portfolio Grid ────────────────────────────────────────────────── */}
       <section className="px-gutter py-16">
-        <div className="grid grid-cols-12 gap-x-8 gap-y-16">
-          {portfolioData.map((company, i) => (
-            <Link
-              key={company.slug}
-              href={`/portefeuille/${company.slug}`}
-              className={[
-                "group col-span-12 cursor-pointer md:col-span-6 lg:col-span-4",
-                STAGGER[i] ?? "",
-              ].join(" ")}
-            >
-              {/* Thumbnail */}
-              <div
+        {filtered.length === 0 ? (
+          <p className="text-body-md text-muted-foreground py-16 text-center">
+            Aucune participation ne correspond à ces filtres.
+          </p>
+        ) : (
+          <div className="grid grid-cols-12 gap-x-8 gap-y-16">
+            {filtered.map((company, i) => (
+              <Link
+                key={company.slug}
+                href={`/portefeuille/${company.slug}`}
                 className={[
-                  "relative mb-6 flex aspect-[4/5] items-end justify-start overflow-hidden",
-                  SECTOR_BG[company.slug] ?? "bg-surface-low",
+                  "group col-span-12 cursor-pointer md:col-span-6 lg:col-span-4",
+                  STAGGER[i] ?? "",
                 ].join(" ")}
               >
-                {/* Geometric abstract pattern */}
-                <div className="pointer-events-none absolute inset-0">
-                  <div className="border-gold/10 group-hover:border-gold/25 absolute top-[15%] left-[10%] h-[40%] w-[40%] border transition-colors duration-700" />
-                  <div className="border-gold/5 group-hover:border-gold/15 absolute top-[30%] left-[25%] h-[55%] w-[55%] border transition-colors duration-700" />
-                  <div className="border-gold/8 group-hover:border-gold/20 absolute right-[15%] bottom-[20%] h-[30%] w-[30%] border transition-colors duration-700" />
-                </div>
-                {/* Company initial */}
-                <span className="text-gold/10 group-hover:text-gold/20 relative z-10 m-6 font-[Newsreader] text-[80px] leading-none font-light transition-colors duration-700 select-none">
-                  {company.name.charAt(0)}
-                </span>
-                {/* MOIC badge — bottom right */}
-                <span className="text-label-caps text-gold bg-background/80 absolute top-4 right-4 px-2 py-1">
-                  {company.moic}x MOIC
-                </span>
-              </div>
-
-              {/* Card meta */}
-              <div className="mb-4 flex items-start justify-between">
-                <span
+                {/* Thumbnail */}
+                <div
                   className={[
-                    "text-label-caps border px-2 py-1",
-                    company.status === "active"
-                      ? "text-gold border-gold"
-                      : "text-muted-foreground border-border",
+                    "relative mb-6 flex aspect-[4/5] items-end justify-start overflow-hidden",
+                    SECTOR_BG[company.slug] ?? "bg-surface-low",
                   ].join(" ")}
                 >
-                  {company.status === "active" ? "Actif" : "Sorti"}
-                </span>
-                <span className="text-label-caps text-muted-foreground">
-                  Vintage {company.vintage}
-                </span>
-              </div>
+                  {/* Geometric abstract pattern */}
+                  <div className="pointer-events-none absolute inset-0">
+                    <div className="border-gold/10 group-hover:border-gold/25 absolute top-[15%] left-[10%] h-[40%] w-[40%] border transition-colors duration-700" />
+                    <div className="border-gold/5 group-hover:border-gold/15 absolute top-[30%] left-[25%] h-[55%] w-[55%] border transition-colors duration-700" />
+                    <div className="border-gold/8 group-hover:border-gold/20 absolute right-[15%] bottom-[20%] h-[30%] w-[30%] border transition-colors duration-700" />
+                  </div>
+                  {/* Company initial */}
+                  <span className="text-gold/10 group-hover:text-gold/20 relative z-10 m-6 font-[Newsreader] text-[80px] leading-none font-light transition-colors duration-700 select-none">
+                    {company.name.charAt(0)}
+                  </span>
+                  {/* MOIC badge */}
+                  <span className="text-label-caps text-gold bg-background/80 absolute top-4 right-4 px-2 py-1">
+                    {company.moic}x MOIC
+                  </span>
+                </div>
 
-              <h2 className="text-headline-md text-foreground group-hover:text-gold mb-1 leading-tight transition-colors duration-300">
-                {company.name}
-              </h2>
-              <p className="text-body-md text-muted-foreground mb-4 line-clamp-2">
-                {company.tagline}
-              </p>
+                {/* Card meta */}
+                <div className="mb-4 flex items-start justify-between">
+                  <span
+                    className={[
+                      "text-label-caps border px-2 py-1",
+                      company.status === "active"
+                        ? "text-gold border-gold"
+                        : "text-muted-foreground border-border",
+                    ].join(" ")}
+                  >
+                    {company.status === "active" ? "Actif" : "Sorti"}
+                  </span>
+                  <span className="text-label-caps text-muted-foreground">
+                    Vintage {company.vintage}
+                  </span>
+                </div>
 
-              <div className="border-border flex items-center justify-between border-t pt-4">
-                <span className="text-label-caps text-muted-foreground tracking-widest uppercase">
-                  {company.sector}
-                </span>
-                <span className="text-label-caps text-gold inline-block transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
+                <h2 className="text-headline-md text-foreground group-hover:text-gold mb-1 leading-tight transition-colors duration-300">
+                  {company.name}
+                </h2>
+                <p className="text-body-md text-muted-foreground mb-4 line-clamp-2">
+                  {company.tagline}
+                </p>
+
+                <div className="border-border flex items-center justify-between border-t pt-4">
+                  <span className="text-label-caps text-muted-foreground tracking-widest uppercase">
+                    {company.sector}
+                  </span>
+                  <span className="text-label-caps text-gold inline-block transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* ── Portfolio KPIs ────────────────────────────────────────────────── */}
