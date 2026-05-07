@@ -1,0 +1,13 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bars (rising left to right) -->
+  <rect x="6" y="28" width="6" height="14" fill="white" opacity="0.4"/>
+  <rect x="15" y="22" width="6" height="20" fill="white" opacity="0.55"/>
+  <rect x="24" y="15" width="6" height="27" fill="white" opacity="0.75"/>
+  <rect x="33" y="8" width="6" height="34" fill="white" opacity="0.95"/>
+  <!-- Trend line -->
+  <polyline points="9,26 18,20 27,13 36,6" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  <!-- Arrow head -->
+  <polyline points="30,5 36,6 35,12" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  <!-- Baseline -->
+  <line x1="4" y1="43" x2="44" y2="43" stroke="white" stroke-width="1" opacity="0.4"/>
+</svg>

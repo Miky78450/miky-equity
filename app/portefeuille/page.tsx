@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Eyebrow } from "@/components/ui/typography";
 import { PortfolioFilters } from "@/components/sections/PortfolioFilters";
 import portfolioData from "@/data/portfolio.json";
@@ -109,7 +110,7 @@ export default async function PortefeuillePage({ searchParams }: Props) {
                 {/* Thumbnail */}
                 <div
                   className={[
-                    "relative mb-6 flex aspect-[4/5] items-end justify-start overflow-hidden",
+                    "relative mb-6 flex aspect-[4/5] items-center justify-center overflow-hidden",
                     SECTOR_BG[company.slug] ?? "bg-surface-low",
                   ].join(" ")}
                 >
@@ -119,14 +120,26 @@ export default async function PortefeuillePage({ searchParams }: Props) {
                     <div className="border-gold/5 group-hover:border-gold/15 absolute top-[30%] left-[25%] h-[55%] w-[55%] border transition-colors duration-700" />
                     <div className="border-gold/8 group-hover:border-gold/20 absolute right-[15%] bottom-[20%] h-[30%] w-[30%] border transition-colors duration-700" />
                   </div>
-                  {/* Company initial */}
-                  <span className="text-gold/10 group-hover:text-gold/20 relative z-10 m-6 font-[Newsreader] text-[80px] leading-none font-light transition-colors duration-700 select-none">
-                    {company.name.charAt(0)}
-                  </span>
-                  {/* MOIC badge */}
-                  <span className="text-label-caps text-gold bg-background/80 absolute top-4 right-4 px-2 py-1">
-                    {company.moic}x MOIC
-                  </span>
+                  {/* SVG logo */}
+                  <div className="relative z-10 flex h-24 w-24 items-center justify-center opacity-70 transition-opacity duration-500 group-hover:opacity-100">
+                    <Image
+                      src={`/logos/${company.slug}.svg`}
+                      alt={company.name}
+                      width={96}
+                      height={96}
+                      className="h-full w-full"
+                    />
+                  </div>
+                  {/* Bottom meta bar */}
+                  <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between p-4">
+                    <span className="text-gold/40 font-[Newsreader] text-[56px] leading-none font-light select-none">
+                      {company.name.charAt(0)}
+                    </span>
+                    {/* MOIC badge */}
+                    <span className="text-label-caps text-gold bg-background/80 px-2 py-1">
+                      {company.moic}x MOIC
+                    </span>
+                  </div>
                 </div>
 
                 {/* Card meta */}

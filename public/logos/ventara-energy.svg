@@ -1,0 +1,13 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tower -->
+  <line x1="24" y1="24" x2="24" y2="42" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+  <line x1="18" y1="42" x2="30" y2="42" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+  <!-- Hub -->
+  <circle cx="24" cy="24" r="2.5" fill="white"/>
+  <!-- Blade 1 — top -->
+  <path d="M24 21 Q20 14 24 6 Q27 14 24 21Z" fill="white" opacity="0.9"/>
+  <!-- Blade 2 — bottom-right -->
+  <path d="M26 25 Q34 22 42 26 Q33 29 26 25Z" fill="white" opacity="0.9"/>
+  <!-- Blade 3 — bottom-left -->
+  <path d="M22 25 Q14 22 6 26 Q15 29 22 25Z" fill="white" opacity="0.9"/>
+</svg>

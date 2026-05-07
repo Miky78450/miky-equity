@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { DisplayHeading, Eyebrow } from "@/components/ui/typography";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/ui/FadeIn";
 import { CountUp } from "@/components/ui/CountUp";
@@ -34,18 +35,24 @@ const INSIGHTS = [
     title: "Pourquoi le NQ Futures est notre instrument de prédilection.",
     slug: "pourquoi-le-nq-futures-est-notre-instrument-de-predilection",
     offset: "",
+    image:
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=750&fit=crop&q=80",
   },
   {
     category: "ANALYSE TECHNIQUE",
     title: "Anatomie d'un Fair Value Gap en Kill Zone.",
     slug: "anatomie-dun-fair-value-gap-en-kill-zone",
     offset: "lg:mt-24",
+    image:
+      "https://images.unsplash.com/photo-1642790551116-304d4bbf3f69?w=600&h=750&fit=crop&q=80",
   },
   {
     category: "RISK MANAGEMENT",
     title: "Gestion du drawdown : discipline vs. modèle.",
     slug: "gestion-du-drawdown-discipline-vs-modele",
     offset: "lg:mt-12",
+    image:
+      "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&h=750&fit=crop&q=80",
   },
 ];
 
@@ -207,7 +214,14 @@ export default function Home() {
                 className="group block cursor-pointer"
               >
                 <div className="bg-surface-high border-border relative mb-6 aspect-[4/5] overflow-hidden border">
-                  <div className="to-surface-high/50 absolute inset-0 bg-gradient-to-b from-transparent" />
+                  <Image
+                    src={article.image}
+                    alt=""
+                    fill
+                    className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="to-surface-high/60 absolute inset-0 bg-gradient-to-b from-transparent" />
                 </div>
                 <span className="text-label-caps text-gold mb-3 block">
                   {article.category}
