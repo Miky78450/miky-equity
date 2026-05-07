@@ -188,7 +188,7 @@ export default async function PortefeuillePage({ searchParams }: Props) {
             },
             {
               label: "GÉOGRAPHIES",
-              value: `0${countries}`,
+              value: `${countries}`,
               sub: "Présence stratégique sur les marchés européens",
             },
           ].map((kpi, i) => (

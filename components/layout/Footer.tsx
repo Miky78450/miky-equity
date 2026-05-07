@@ -57,10 +57,7 @@ export function Footer() {
         </nav>
 
         {/* Portail — liens non actifs (fictifs), rendus comme texte */}
-        <div
-          className="col-span-6 lg:col-span-2"
-          aria-label="Portail investisseur"
-        >
+        <div className="col-span-6 lg:col-span-2">
           <h5 className="text-label-caps text-foreground mb-6">Portail</h5>
           <ul className="space-y-3" role="list">
             {PORTAL_ITEMS.map((label) => (

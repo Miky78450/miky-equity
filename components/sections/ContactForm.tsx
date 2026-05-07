@@ -17,6 +17,9 @@ type FormData = z.infer<typeof schema>;
 const inputClass =
   "w-full bg-surface-low border border-border text-foreground text-body-md px-4 py-3 focus:outline-none focus:border-gold transition-colors placeholder:text-muted-foreground/40";
 
+const inputErrorClass =
+  "w-full bg-surface-low border border-destructive/60 bg-destructive/5 text-foreground text-body-md px-4 py-3 focus:outline-none focus:border-destructive transition-colors placeholder:text-muted-foreground/40";
+
 export function ContactForm() {
   const [sent, setSent] = useState(false);
 
@@ -71,7 +74,7 @@ export function ContactForm() {
           autoComplete="name"
           aria-invalid={!!errors.nom}
           aria-describedby={errors.nom ? "error-nom" : undefined}
-          className={inputClass}
+          className={errors.nom ? inputErrorClass : inputClass}
         />
         {errors.nom && (
           <p
@@ -99,7 +102,7 @@ export function ContactForm() {
           autoComplete="email"
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? "error-email" : undefined}
-          className={inputClass}
+          className={errors.email ? inputErrorClass : inputClass}
         />
         {errors.email && (
           <p
@@ -126,7 +129,7 @@ export function ContactForm() {
           placeholder="Demande d'allocation / Partenariat"
           aria-invalid={!!errors.objet}
           aria-describedby={errors.objet ? "error-objet" : undefined}
-          className={inputClass}
+          className={errors.objet ? inputErrorClass : inputClass}
         />
         {errors.objet && (
           <p
@@ -153,7 +156,7 @@ export function ContactForm() {
           placeholder="Décrivez votre demande..."
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "error-message" : undefined}
-          className={`${inputClass} resize-none`}
+          className={`${errors.message ? inputErrorClass : inputClass} resize-none`}
         />
         {errors.message && (
           <p

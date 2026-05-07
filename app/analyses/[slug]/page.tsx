@@ -40,6 +40,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: article.metadata.summary,
       type: "article",
       publishedTime: article.metadata.date,
+      images: [
+        {
+          url: `/analyses/${slug}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: article.metadata.title,
+        },
+      ],
     },
   };
 }
