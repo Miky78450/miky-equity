@@ -1,0 +1,1012 @@
+[
+  {
+    "date": "2018-01-31",
+    "equity": 102446,
+    "monthlyReturn": 0.0245,
+    "equity_r": 2.45,
+    "monthly_r": 2.45,
+    "trades": 1,
+    "wins": 1,
+    "losses": 0
+  },
+  {
+    "date": "2018-02-28",
+    "equity": 110144,
+    "monthlyReturn": 0.0751,
+    "equity_r": 10.14,
+    "monthly_r": 7.7,
+    "trades": 7,
+    "wins": 5,
+    "losses": 2
+  },
+  {
+    "date": "2018-03-31",
+    "equity": 113984,
+    "monthlyReturn": 0.0349,
+    "equity_r": 13.98,
+    "monthly_r": 3.84,
+    "trades": 15,
+    "wins": 7,
+    "losses": 8
+  },
+  {
+    "date": "2018-04-30",
+    "equity": 130880,
+    "monthlyReturn": 0.1482,
+    "equity_r": 30.88,
+    "monthly_r": 16.9,
+    "trades": 14,
+    "wins": 10,
+    "losses": 4
+  },
+  {
+    "date": "2018-05-31",
+    "equity": 136006,
+    "monthlyReturn": 0.0392,
+    "equity_r": 36.01,
+    "monthly_r": 5.13,
+    "trades": 8,
+    "wins": 5,
+    "losses": 3
+  },
+  {
+    "date": "2018-06-30",
+    "equity": 137004,
+    "monthlyReturn": 0.0073,
+    "equity_r": 37.0,
+    "monthly_r": 1.0,
+    "trades": 7,
+    "wins": 3,
+    "losses": 4
+  },
+  {
+    "date": "2018-07-31",
+    "equity": 139667,
+    "monthlyReturn": 0.0194,
+    "equity_r": 39.67,
+    "monthly_r": 2.66,
+    "trades": 3,
+    "wins": 2,
+    "losses": 1
+  },
+  {
+    "date": "2018-08-31",
+    "equity": 139280,
+    "monthlyReturn": -0.0028,
+    "equity_r": 39.28,
+    "monthly_r": -0.39,
+    "trades": 3,
+    "wins": 2,
+    "losses": 1
+  },
+  {
+    "date": "2018-09-30",
+    "equity": 135064,
+    "monthlyReturn": -0.0303,
+    "equity_r": 35.06,
+    "monthly_r": -4.22,
+    "trades": 4,
+    "wins": 0,
+    "losses": 4
+  },
+  {
+    "date": "2018-10-31",
+    "equity": 139591,
+    "monthlyReturn": 0.0335,
+    "equity_r": 39.59,
+    "monthly_r": 4.53,
+    "trades": 9,
+    "wins": 4,
+    "losses": 5
+  },
+  {
+    "date": "2018-11-30",
+    "equity": 146218,
+    "monthlyReturn": 0.0475,
+    "equity_r": 46.22,
+    "monthly_r": 6.63,
+    "trades": 7,
+    "wins": 4,
+    "losses": 3
+  },
+  {
+    "date": "2018-12-31",
+    "equity": 163488,
+    "monthlyReturn": 0.1181,
+    "equity_r": 63.49,
+    "monthly_r": 17.27,
+    "trades": 15,
+    "wins": 10,
+    "losses": 5
+  },
+  {
+    "date": "2019-01-31",
+    "equity": 169797,
+    "monthlyReturn": 0.0386,
+    "equity_r": 69.8,
+    "monthly_r": 6.31,
+    "trades": 4,
+    "wins": 3,
+    "losses": 1
+  },
+  {
+    "date": "2019-02-28",
+    "equity": 167111,
+    "monthlyReturn": -0.0158,
+    "equity_r": 67.11,
+    "monthly_r": -2.69,
+    "trades": 4,
+    "wins": 1,
+    "losses": 3
+  },
+  {
+    "date": "2019-03-31",
+    "equity": 164287,
+    "monthlyReturn": -0.0169,
+    "equity_r": 64.29,
+    "monthly_r": -2.82,
+    "trades": 6,
+    "wins": 1,
+    "losses": 5
+  },
+  {
+    "date": "2019-04-30",
+    "equity": 163900,
+    "monthlyReturn": -0.0024,
+    "equity_r": 63.9,
+    "monthly_r": -0.39,
+    "trades": 3,
+    "wins": 1,
+    "losses": 2
+  },
+  {
+    "date": "2019-05-31",
+    "equity": 173489,
+    "monthlyReturn": 0.0585,
+    "equity_r": 73.49,
+    "monthly_r": 9.59,
+    "trades": 9,
+    "wins": 6,
+    "losses": 3
+  },
+  {
+    "date": "2019-06-30",
+    "equity": 173941,
+    "monthlyReturn": 0.0026,
+    "equity_r": 73.94,
+    "monthly_r": 0.45,
+    "trades": 12,
+    "wins": 5,
+    "losses": 7
+  },
+  {
+    "date": "2019-07-31",
+    "equity": 177779,
+    "monthlyReturn": 0.0221,
+    "equity_r": 77.78,
+    "monthly_r": 3.84,
+    "trades": 3,
+    "wins": 2,
+    "losses": 1
+  },
+  {
+    "date": "2019-08-31",
+    "equity": 183476,
+    "monthlyReturn": 0.032,
+    "equity_r": 83.48,
+    "monthly_r": 5.7,
+    "trades": 7,
+    "wins": 4,
+    "losses": 3
+  },
+  {
+    "date": "2019-09-30",
+    "equity": 183907,
+    "monthlyReturn": 0.0023,
+    "equity_r": 83.91,
+    "monthly_r": 0.43,
+    "trades": 11,
+    "wins": 5,
+    "losses": 6
+  },
+  {
+    "date": "2019-10-31",
+    "equity": 188256,
+    "monthlyReturn": 0.0236,
+    "equity_r": 88.26,
+    "monthly_r": 4.35,
+    "trades": 10,
+    "wins": 6,
+    "losses": 4
+  },
+  {
+    "date": "2019-11-30",
+    "equity": 192799,
+    "monthlyReturn": 0.0241,
+    "equity_r": 92.8,
+    "monthly_r": 4.54,
+    "trades": 6,
+    "wins": 3,
+    "losses": 3
+  },
+  {
+    "date": "2019-12-31",
+    "equity": 182643,
+    "monthlyReturn": -0.0527,
+    "equity_r": 82.64,
+    "monthly_r": -10.16,
+    "trades": 14,
+    "wins": 2,
+    "losses": 12
+  },
+  {
+    "date": "2020-01-31",
+    "equity": 189027,
+    "monthlyReturn": 0.035,
+    "equity_r": 89.03,
+    "monthly_r": 6.38,
+    "trades": 4,
+    "wins": 3,
+    "losses": 1
+  },
+  {
+    "date": "2020-02-29",
+    "equity": 207640,
+    "monthlyReturn": 0.0985,
+    "equity_r": 107.64,
+    "monthly_r": 18.61,
+    "trades": 10,
+    "wins": 9,
+    "losses": 1
+  },
+  {
+    "date": "2020-03-31",
+    "equity": 235367,
+    "monthlyReturn": 0.1335,
+    "equity_r": 135.37,
+    "monthly_r": 27.73,
+    "trades": 27,
+    "wins": 18,
+    "losses": 9
+  },
+  {
+    "date": "2020-04-30",
+    "equity": 247668,
+    "monthlyReturn": 0.0523,
+    "equity_r": 147.67,
+    "monthly_r": 12.3,
+    "trades": 11,
+    "wins": 8,
+    "losses": 3
+  },
+  {
+    "date": "2020-05-31",
+    "equity": 265912,
+    "monthlyReturn": 0.0737,
+    "equity_r": 165.91,
+    "monthly_r": 18.24,
+    "trades": 14,
+    "wins": 10,
+    "losses": 4
+  },
+  {
+    "date": "2020-06-30",
+    "equity": 280280,
+    "monthlyReturn": 0.054,
+    "equity_r": 180.28,
+    "monthly_r": 14.37,
+    "trades": 23,
+    "wins": 14,
+    "losses": 9
+  },
+  {
+    "date": "2020-07-31",
+    "equity": 298336,
+    "monthlyReturn": 0.0644,
+    "equity_r": 198.34,
+    "monthly_r": 18.06,
+    "trades": 15,
+    "wins": 10,
+    "losses": 5
+  },
+  {
+    "date": "2020-08-31",
+    "equity": 303782,
+    "monthlyReturn": 0.0183,
+    "equity_r": 203.78,
+    "monthly_r": 5.45,
+    "trades": 8,
+    "wins": 5,
+    "losses": 3
+  },
+  {
+    "date": "2020-09-30",
+    "equity": 309737,
+    "monthlyReturn": 0.0196,
+    "equity_r": 209.74,
+    "monthly_r": 5.95,
+    "trades": 14,
+    "wins": 7,
+    "losses": 7
+  },
+  {
+    "date": "2020-10-31",
+    "equity": 328517,
+    "monthlyReturn": 0.0606,
+    "equity_r": 228.52,
+    "monthly_r": 18.78,
+    "trades": 22,
+    "wins": 13,
+    "losses": 9
+  },
+  {
+    "date": "2020-11-30",
+    "equity": 353828,
+    "monthlyReturn": 0.077,
+    "equity_r": 253.83,
+    "monthly_r": 25.31,
+    "trades": 17,
+    "wins": 13,
+    "losses": 4
+  },
+  {
+    "date": "2020-12-31",
+    "equity": 357898,
+    "monthlyReturn": 0.0115,
+    "equity_r": 257.9,
+    "monthly_r": 4.07,
+    "trades": 10,
+    "wins": 5,
+    "losses": 5
+  },
+  {
+    "date": "2021-01-31",
+    "equity": 382643,
+    "monthlyReturn": 0.0691,
+    "equity_r": 282.64,
+    "monthly_r": 24.74,
+    "trades": 23,
+    "wins": 15,
+    "losses": 8
+  },
+  {
+    "date": "2021-02-28",
+    "equity": 397152,
+    "monthlyReturn": 0.0379,
+    "equity_r": 297.15,
+    "monthly_r": 14.51,
+    "trades": 12,
+    "wins": 8,
+    "losses": 4
+  },
+  {
+    "date": "2021-03-31",
+    "equity": 428704,
+    "monthlyReturn": 0.0794,
+    "equity_r": 328.7,
+    "monthly_r": 31.55,
+    "trades": 25,
+    "wins": 17,
+    "losses": 8
+  },
+  {
+    "date": "2021-04-30",
+    "equity": 439141,
+    "monthlyReturn": 0.0243,
+    "equity_r": 339.14,
+    "monthly_r": 10.44,
+    "trades": 8,
+    "wins": 6,
+    "losses": 2
+  },
+  {
+    "date": "2021-05-31",
+    "equity": 445377,
+    "monthlyReturn": 0.0142,
+    "equity_r": 345.38,
+    "monthly_r": 6.24,
+    "trades": 9,
+    "wins": 5,
+    "losses": 4
+  },
+  {
+    "date": "2021-06-30",
+    "equity": 464737,
+    "monthlyReturn": 0.0435,
+    "equity_r": 364.74,
+    "monthly_r": 19.36,
+    "trades": 16,
+    "wins": 8,
+    "losses": 8
+  },
+  {
+    "date": "2021-07-31",
+    "equity": 487825,
+    "monthlyReturn": 0.0497,
+    "equity_r": 387.82,
+    "monthly_r": 23.09,
+    "trades": 17,
+    "wins": 13,
+    "losses": 4
+  },
+  {
+    "date": "2021-08-31",
+    "equity": 516898,
+    "monthlyReturn": 0.0596,
+    "equity_r": 416.9,
+    "monthly_r": 29.07,
+    "trades": 19,
+    "wins": 14,
+    "losses": 5
+  },
+  {
+    "date": "2021-09-30",
+    "equity": 529208,
+    "monthlyReturn": 0.0238,
+    "equity_r": 429.21,
+    "monthly_r": 12.31,
+    "trades": 15,
+    "wins": 9,
+    "losses": 6
+  },
+  {
+    "date": "2021-10-31",
+    "equity": 529933,
+    "monthlyReturn": 0.0014,
+    "equity_r": 429.93,
+    "monthly_r": 0.72,
+    "trades": 10,
+    "wins": 3,
+    "losses": 7
+  },
+  {
+    "date": "2021-11-30",
+    "equity": 536426,
+    "monthlyReturn": 0.0123,
+    "equity_r": 436.43,
+    "monthly_r": 6.49,
+    "trades": 23,
+    "wins": 10,
+    "losses": 13
+  },
+  {
+    "date": "2021-12-31",
+    "equity": 553925,
+    "monthlyReturn": 0.0326,
+    "equity_r": 453.92,
+    "monthly_r": 17.5,
+    "trades": 10,
+    "wins": 8,
+    "losses": 2
+  },
+  {
+    "date": "2022-01-31",
+    "equity": 568592,
+    "monthlyReturn": 0.0265,
+    "equity_r": 468.59,
+    "monthly_r": 14.67,
+    "trades": 14,
+    "wins": 9,
+    "losses": 5
+  },
+  {
+    "date": "2022-02-28",
+    "equity": 596509,
+    "monthlyReturn": 0.0491,
+    "equity_r": 496.51,
+    "monthly_r": 27.92,
+    "trades": 20,
+    "wins": 15,
+    "losses": 5
+  },
+  {
+    "date": "2022-03-31",
+    "equity": 615741,
+    "monthlyReturn": 0.0322,
+    "equity_r": 515.74,
+    "monthly_r": 19.23,
+    "trades": 20,
+    "wins": 12,
+    "losses": 8
+  },
+  {
+    "date": "2022-04-30",
+    "equity": 630126,
+    "monthlyReturn": 0.0234,
+    "equity_r": 530.13,
+    "monthly_r": 14.39,
+    "trades": 15,
+    "wins": 9,
+    "losses": 6
+  },
+  {
+    "date": "2022-05-31",
+    "equity": 662901,
+    "monthlyReturn": 0.052,
+    "equity_r": 562.9,
+    "monthly_r": 32.77,
+    "trades": 23,
+    "wins": 17,
+    "losses": 6
+  },
+  {
+    "date": "2022-06-30",
+    "equity": 670480,
+    "monthlyReturn": 0.0114,
+    "equity_r": 570.48,
+    "monthly_r": 7.58,
+    "trades": 16,
+    "wins": 7,
+    "losses": 9
+  },
+  {
+    "date": "2022-07-31",
+    "equity": 686667,
+    "monthlyReturn": 0.0241,
+    "equity_r": 586.67,
+    "monthly_r": 16.19,
+    "trades": 21,
+    "wins": 12,
+    "losses": 9
+  },
+  {
+    "date": "2022-08-31",
+    "equity": 706790,
+    "monthlyReturn": 0.0293,
+    "equity_r": 606.79,
+    "monthly_r": 20.12,
+    "trades": 14,
+    "wins": 10,
+    "losses": 4
+  },
+  {
+    "date": "2022-09-30",
+    "equity": 765929,
+    "monthlyReturn": 0.0837,
+    "equity_r": 665.93,
+    "monthly_r": 59.14,
+    "trades": 61,
+    "wins": 38,
+    "losses": 23
+  },
+  {
+    "date": "2022-10-31",
+    "equity": 800959,
+    "monthlyReturn": 0.0457,
+    "equity_r": 700.96,
+    "monthly_r": 35.03,
+    "trades": 29,
+    "wins": 19,
+    "losses": 10
+  },
+  {
+    "date": "2022-11-30",
+    "equity": 819469,
+    "monthlyReturn": 0.0231,
+    "equity_r": 719.47,
+    "monthly_r": 18.51,
+    "trades": 17,
+    "wins": 11,
+    "losses": 6
+  },
+  {
+    "date": "2022-12-31",
+    "equity": 841716,
+    "monthlyReturn": 0.0271,
+    "equity_r": 741.72,
+    "monthly_r": 22.25,
+    "trades": 19,
+    "wins": 10,
+    "losses": 9
+  },
+  {
+    "date": "2023-01-31",
+    "equity": 860360,
+    "monthlyReturn": 0.0222,
+    "equity_r": 760.36,
+    "monthly_r": 18.64,
+    "trades": 21,
+    "wins": 12,
+    "losses": 9
+  },
+  {
+    "date": "2023-02-28",
+    "equity": 884144,
+    "monthlyReturn": 0.0276,
+    "equity_r": 784.14,
+    "monthly_r": 23.78,
+    "trades": 21,
+    "wins": 14,
+    "losses": 7
+  },
+  {
+    "date": "2023-03-31",
+    "equity": 893716,
+    "monthlyReturn": 0.0108,
+    "equity_r": 793.72,
+    "monthly_r": 9.57,
+    "trades": 22,
+    "wins": 11,
+    "losses": 11
+  },
+  {
+    "date": "2023-04-30",
+    "equity": 904435,
+    "monthlyReturn": 0.012,
+    "equity_r": 804.43,
+    "monthly_r": 10.72,
+    "trades": 19,
+    "wins": 10,
+    "losses": 9
+  },
+  {
+    "date": "2023-05-31",
+    "equity": 918208,
+    "monthlyReturn": 0.0152,
+    "equity_r": 818.21,
+    "monthly_r": 13.77,
+    "trades": 9,
+    "wins": 7,
+    "losses": 2
+  },
+  {
+    "date": "2023-06-30",
+    "equity": 930054,
+    "monthlyReturn": 0.0129,
+    "equity_r": 830.05,
+    "monthly_r": 11.85,
+    "trades": 17,
+    "wins": 9,
+    "losses": 8
+  },
+  {
+    "date": "2023-07-31",
+    "equity": 941253,
+    "monthlyReturn": 0.012,
+    "equity_r": 841.25,
+    "monthly_r": 11.2,
+    "trades": 11,
+    "wins": 7,
+    "losses": 4
+  },
+  {
+    "date": "2023-08-31",
+    "equity": 959706,
+    "monthlyReturn": 0.0196,
+    "equity_r": 859.71,
+    "monthly_r": 18.45,
+    "trades": 17,
+    "wins": 11,
+    "losses": 6
+  },
+  {
+    "date": "2023-09-30",
+    "equity": 975497,
+    "monthlyReturn": 0.0165,
+    "equity_r": 875.5,
+    "monthly_r": 15.79,
+    "trades": 18,
+    "wins": 10,
+    "losses": 8
+  },
+  {
+    "date": "2023-10-31",
+    "equity": 979084,
+    "monthlyReturn": 0.0037,
+    "equity_r": 879.08,
+    "monthly_r": 3.59,
+    "trades": 21,
+    "wins": 8,
+    "losses": 13
+  },
+  {
+    "date": "2023-11-30",
+    "equity": 983815,
+    "monthlyReturn": 0.0048,
+    "equity_r": 883.82,
+    "monthly_r": 4.73,
+    "trades": 10,
+    "wins": 5,
+    "losses": 5
+  },
+  {
+    "date": "2023-12-31",
+    "equity": 989321,
+    "monthlyReturn": 0.0056,
+    "equity_r": 889.32,
+    "monthly_r": 5.51,
+    "trades": 16,
+    "wins": 7,
+    "losses": 9
+  },
+  {
+    "date": "2024-01-31",
+    "equity": 1002460,
+    "monthlyReturn": 0.0133,
+    "equity_r": 902.46,
+    "monthly_r": 13.14,
+    "trades": 11,
+    "wins": 8,
+    "losses": 3
+  },
+  {
+    "date": "2024-02-29",
+    "equity": 1020618,
+    "monthlyReturn": 0.0181,
+    "equity_r": 920.62,
+    "monthly_r": 18.16,
+    "trades": 16,
+    "wins": 10,
+    "losses": 6
+  },
+  {
+    "date": "2024-03-31",
+    "equity": 1040937,
+    "monthlyReturn": 0.0199,
+    "equity_r": 940.94,
+    "monthly_r": 20.32,
+    "trades": 22,
+    "wins": 13,
+    "losses": 9
+  },
+  {
+    "date": "2024-04-30",
+    "equity": 1050796,
+    "monthlyReturn": 0.0095,
+    "equity_r": 950.8,
+    "monthly_r": 9.86,
+    "trades": 14,
+    "wins": 8,
+    "losses": 6
+  },
+  {
+    "date": "2024-05-31",
+    "equity": 1069399,
+    "monthlyReturn": 0.0177,
+    "equity_r": 969.4,
+    "monthly_r": 18.6,
+    "trades": 18,
+    "wins": 12,
+    "losses": 6
+  },
+  {
+    "date": "2024-06-30",
+    "equity": 1087218,
+    "monthlyReturn": 0.0167,
+    "equity_r": 987.22,
+    "monthly_r": 17.82,
+    "trades": 13,
+    "wins": 9,
+    "losses": 4
+  },
+  {
+    "date": "2024-07-31",
+    "equity": 1105054,
+    "monthlyReturn": 0.0164,
+    "equity_r": 1005.05,
+    "monthly_r": 17.84,
+    "trades": 13,
+    "wins": 9,
+    "losses": 4
+  },
+  {
+    "date": "2024-08-31",
+    "equity": 1129154,
+    "monthlyReturn": 0.0218,
+    "equity_r": 1029.15,
+    "monthly_r": 24.1,
+    "trades": 24,
+    "wins": 15,
+    "losses": 9
+  },
+  {
+    "date": "2024-09-30",
+    "equity": 1147137,
+    "monthlyReturn": 0.0159,
+    "equity_r": 1047.14,
+    "monthly_r": 17.98,
+    "trades": 24,
+    "wins": 14,
+    "losses": 10
+  },
+  {
+    "date": "2024-10-31",
+    "equity": 1157630,
+    "monthlyReturn": 0.0091,
+    "equity_r": 1057.63,
+    "monthly_r": 10.49,
+    "trades": 19,
+    "wins": 9,
+    "losses": 10
+  },
+  {
+    "date": "2024-11-30",
+    "equity": 1177660,
+    "monthlyReturn": 0.0173,
+    "equity_r": 1077.66,
+    "monthly_r": 20.03,
+    "trades": 19,
+    "wins": 12,
+    "losses": 7
+  },
+  {
+    "date": "2024-12-31",
+    "equity": 1181508,
+    "monthlyReturn": 0.0033,
+    "equity_r": 1081.51,
+    "monthly_r": 3.85,
+    "trades": 3,
+    "wins": 2,
+    "losses": 1
+  },
+  {
+    "date": "2025-01-31",
+    "equity": 1204346,
+    "monthlyReturn": 0.0193,
+    "equity_r": 1104.35,
+    "monthly_r": 22.84,
+    "trades": 19,
+    "wins": 12,
+    "losses": 7
+  },
+  {
+    "date": "2025-02-28",
+    "equity": 1218025,
+    "monthlyReturn": 0.0114,
+    "equity_r": 1118.02,
+    "monthly_r": 13.68,
+    "trades": 17,
+    "wins": 9,
+    "losses": 8
+  },
+  {
+    "date": "2025-03-31",
+    "equity": 1243635,
+    "monthlyReturn": 0.021,
+    "equity_r": 1143.64,
+    "monthly_r": 25.61,
+    "trades": 39,
+    "wins": 20,
+    "losses": 19
+  },
+  {
+    "date": "2025-04-30",
+    "equity": 1276161,
+    "monthlyReturn": 0.0262,
+    "equity_r": 1176.16,
+    "monthly_r": 32.53,
+    "trades": 24,
+    "wins": 17,
+    "losses": 7
+  },
+  {
+    "date": "2025-05-31",
+    "equity": 1300516,
+    "monthlyReturn": 0.0191,
+    "equity_r": 1200.52,
+    "monthly_r": 24.36,
+    "trades": 27,
+    "wins": 18,
+    "losses": 9
+  },
+  {
+    "date": "2025-06-30",
+    "equity": 1317142,
+    "monthlyReturn": 0.0128,
+    "equity_r": 1217.14,
+    "monthly_r": 16.63,
+    "trades": 21,
+    "wins": 11,
+    "losses": 10
+  },
+  {
+    "date": "2025-07-31",
+    "equity": 1343544,
+    "monthlyReturn": 0.02,
+    "equity_r": 1243.54,
+    "monthly_r": 26.4,
+    "trades": 26,
+    "wins": 18,
+    "losses": 8
+  },
+  {
+    "date": "2025-08-31",
+    "equity": 1359599,
+    "monthlyReturn": 0.0119,
+    "equity_r": 1259.6,
+    "monthly_r": 16.05,
+    "trades": 15,
+    "wins": 10,
+    "losses": 5
+  },
+  {
+    "date": "2025-09-30",
+    "equity": 1376141,
+    "monthlyReturn": 0.0122,
+    "equity_r": 1276.14,
+    "monthly_r": 16.54,
+    "trades": 25,
+    "wins": 13,
+    "losses": 12
+  },
+  {
+    "date": "2025-10-31",
+    "equity": 1398779,
+    "monthlyReturn": 0.0165,
+    "equity_r": 1298.78,
+    "monthly_r": 22.64,
+    "trades": 25,
+    "wins": 15,
+    "losses": 10
+  },
+  {
+    "date": "2025-11-30",
+    "equity": 1415679,
+    "monthlyReturn": 0.0121,
+    "equity_r": 1315.68,
+    "monthly_r": 16.9,
+    "trades": 24,
+    "wins": 12,
+    "losses": 12
+  },
+  {
+    "date": "2025-12-31",
+    "equity": 1453155,
+    "monthlyReturn": 0.0265,
+    "equity_r": 1353.15,
+    "monthly_r": 37.48,
+    "trades": 36,
+    "wins": 22,
+    "losses": 14
+  },
+  {
+    "date": "2026-01-31",
+    "equity": 1472056,
+    "monthlyReturn": 0.013,
+    "equity_r": 1372.06,
+    "monthly_r": 18.9,
+    "trades": 17,
+    "wins": 11,
+    "losses": 6
+  },
+  {
+    "date": "2026-02-28",
+    "equity": 1483505,
+    "monthlyReturn": 0.0078,
+    "equity_r": 1383.51,
+    "monthly_r": 11.45,
+    "trades": 18,
+    "wins": 9,
+    "losses": 9
+  },
+  {
+    "date": "2026-03-31",
+    "equity": 1511372,
+    "monthlyReturn": 0.0188,
+    "equity_r": 1411.37,
+    "monthly_r": 27.87,
+    "trades": 44,
+    "wins": 23,
+    "losses": 21
+  },
+  {
+    "date": "2026-04-30",
+    "equity": 1519179,
+    "monthlyReturn": 0.0052,
+    "equity_r": 1419.18,
+    "monthly_r": 7.81,
+    "trades": 17,
+    "wins": 9,
+    "losses": 8
+  },
+  {
+    "date": "2026-05-31",
+    "equity": 1517071,
+    "monthlyReturn": -0.0014,
+    "equity_r": 1417.07,
+    "monthly_r": -2.11,
+    "trades": 2,
+    "wins": 0,
+    "losses": 2
+  }
+]

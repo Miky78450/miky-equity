@@ -1,26 +1,141 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/* ─── Design Tokens — Miky Equity ───────────────────────────────────────── */
 @theme inline {
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-newsreader);
+  --font-mono: ui-monospace, monospace;
+
+  /* Brand colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --color-gold-dim: var(--gold-dim);
+  --color-surface: var(--surface);
+  --color-surface-low: var(--surface-low);
+  --color-surface-high: var(--surface-high);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* shadcn tokens */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Chart colors */
+  --color-chart-1: var(--gold);
+  --color-chart-2: #abcebe;
+  --color-chart-3: #c3c6cf;
+  --color-chart-4: #8f9095;
+  --color-chart-5: #45474b;
+
+  /* Radius — 0px everywhere (brand rule: no rounded corners) */
+  --radius: 0rem;
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Dark mode (default) ─────────────────────────────────────────────────── */
+:root {
+  color-scheme: dark;
+
+  --background: #121412;
+  --foreground: #e2e3e0;
+
+  --gold: #e4c278;
+  --gold-dim: #d5b46b;
+
+  --surface: #121412;
+  --surface-low: #1a1c1b;
+  --surface-high: #282a29;
+
+  --card: #1e201f;
+  --card-foreground: #e2e3e0;
+  --popover: #1e201f;
+  --popover-foreground: #e2e3e0;
+
+  --primary: #e4c278;
+  --primary-foreground: #3f2e00;
+
+  --secondary: #1e201f;
+  --secondary-foreground: #e2e3e0;
+
+  --muted: #1e201f;
+  --muted-foreground: #8f9095;
+
+  --accent: #282a29;
+  --accent-foreground: #e2e3e0;
+
+  --destructive: #ffb4ab;
+  --border: rgba(226, 227, 224, 0.1);
+  --input: rgba(226, 227, 224, 0.1);
+  --ring: #e4c278;
+}
+
+/* ─── Base styles ─────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Tabular nums for all data/numbers */
+  .tabular {
+    font-variant-numeric: tabular-nums slashed-zero;
+  }
+
+  /* Hairline dividers */
+  hr {
+    @apply border-border;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Hover underline animation (nav links) ──────────────────────────────── */
+@layer components {
+  .hover-underline {
+    position: relative;
+  }
+
+  .hover-underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #e4c278;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .hover-underline:hover::after {
+    width: 100%;
+  }
 }
