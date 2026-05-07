@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
+import { Navbar } from "@/components/layout";
+import { Footer } from "@/components/layout";
 import "./globals.css";
 
-// Inter — font UI, data, corps de texte
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-// Newsreader — font éditoriale, titres, hero
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
@@ -40,7 +40,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-background text-foreground flex min-h-full flex-col antialiased">
-        {children}
+        <Navbar />
+        <div className="flex flex-1 flex-col">{children}</div>
+        <Footer />
       </body>
     </html>
   );
