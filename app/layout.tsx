@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Navbar } from "@/components/layout";
 import { Footer } from "@/components/layout";
 import "./globals.css";
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Navbar />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
