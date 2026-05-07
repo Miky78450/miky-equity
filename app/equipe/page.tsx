@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Eyebrow } from "@/components/ui/typography";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Équipe" };
+export const metadata: Metadata = {
+  title: "Équipe",
+  description:
+    "L'équipe Miky Equity — traders, analystes et opérationnels spécialisés en stratégie ICT et gestion de risque institutionnelle.",
+};
 
 const TEAM = [
   {

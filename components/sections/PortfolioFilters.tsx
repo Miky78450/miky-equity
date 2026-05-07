@@ -40,6 +40,7 @@ function FilterGroup({ param, options, current }: FilterGroupProps) {
           <button
             key={opt.value}
             onClick={() => setFilter(opt.value)}
+            aria-pressed={isActive}
             className={[
               "text-label-caps border px-3 py-1.5 transition-colors duration-150",
               isActive
@@ -103,7 +104,11 @@ export function PortfolioFilters({
     <div className="border-border border-b py-8">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-12">
         {/* Secteur */}
-        <div className="flex flex-col gap-3">
+        <div
+          role="group"
+          aria-label="Filtrer par secteur"
+          className="flex flex-col gap-3"
+        >
           <span className="text-label-caps text-muted-foreground">SECTEUR</span>
           <FilterGroup
             param="secteur"
@@ -113,7 +118,11 @@ export function PortfolioFilters({
         </div>
 
         {/* Statut */}
-        <div className="flex flex-col gap-3">
+        <div
+          role="group"
+          aria-label="Filtrer par statut"
+          className="flex flex-col gap-3"
+        >
           <span className="text-label-caps text-muted-foreground">STATUT</span>
           <FilterGroup
             param="statut"
@@ -123,7 +132,11 @@ export function PortfolioFilters({
         </div>
 
         {/* Millésime */}
-        <div className="flex flex-col gap-3">
+        <div
+          role="group"
+          aria-label="Filtrer par millésime"
+          className="flex flex-col gap-3"
+        >
           <span className="text-label-caps text-muted-foreground">
             MILLÉSIME
           </span>
@@ -139,6 +152,7 @@ export function PortfolioFilters({
           {hasActiveFilter && (
             <button
               onClick={clearAll}
+              aria-label="Réinitialiser tous les filtres"
               className="text-label-caps text-muted-foreground hover:text-foreground transition-colors"
             >
               Réinitialiser

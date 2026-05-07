@@ -16,7 +16,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const company = portfolioData.find((c) => c.slug === slug);
   if (!company) return { title: "Not Found" };
-  return { title: company.name };
+  return {
+    title: company.name,
+    description: `${company.tagline} — ${company.sector}. MOIC ${company.moic}x, IRR ${company.irr}%.`,
+    openGraph: {
+      title: company.name,
+      description: company.tagline,
+    },
+  };
 }
 
 export default async function PortefeuilleSlugPage({ params }: Props) {

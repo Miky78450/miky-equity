@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Eyebrow } from "@/components/ui/typography";
 
-export const metadata: Metadata = { title: "À Propos" };
+export const metadata: Metadata = {
+  title: "À Propos",
+  description:
+    "Miky Equity — fonds fondé en 2018, $12M AUM, stratégie ICT sur NQ Futures. Préservation du capital, rigueur et transparence.",
+};
 
 const TIMELINE = [
   {

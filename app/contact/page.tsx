@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Eyebrow } from "@/components/ui/typography";
 import { ContactForm } from "@/components/sections/ContactForm";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contactez l'équipe Miky Equity — bureaux à Londres, Zürich et Dubaï. Demandes d'allocation et partenariats institutionnels.",
+};
 
 const OFFICES = [
   {

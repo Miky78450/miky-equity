@@ -4,7 +4,11 @@ import { Eyebrow } from "@/components/ui/typography";
 import { PortfolioFilters } from "@/components/sections/PortfolioFilters";
 import portfolioData from "@/data/portfolio.json";
 
-export const metadata: Metadata = { title: "Portefeuille" };
+export const metadata: Metadata = {
+  title: "Portefeuille",
+  description:
+    "5 participations actives et sorties — technologie, santé, énergie et fintech. MOIC moyen 5.97x, IRR 42.6% sur 5 investissements.",
+};
 
 // Stagger vertical offsets — alternating rhythm like the design
 const STAGGER = ["", "md:mt-24", "", "lg:-mt-12", "md:mt-12"] as const;

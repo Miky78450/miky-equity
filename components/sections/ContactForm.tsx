@@ -27,15 +27,20 @@ export function ContactForm() {
     reset,
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  function onSubmit(data: FormData) {
-    console.log("Form data:", data);
+  async function onSubmit(_data: FormData) {
+    // Simulated async submission (pas de backend réel — projet CV fictif)
+    await new Promise((r) => setTimeout(r, 600));
     setSent(true);
     reset();
   }
 
   if (sent) {
     return (
-      <div className="border-gold/30 border p-8">
+      <div
+        className="border-gold/30 border p-8"
+        role="status"
+        aria-live="polite"
+      >
         <p className="text-body-lg text-gold mb-2">Message envoyé.</p>
         <p className="text-body-md text-muted-foreground">
           Notre équipe vous contactera sous 48h ouvrées.
@@ -45,70 +50,117 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+      className="space-y-6"
+      aria-label="Formulaire de contact"
+    >
       <div>
-        <label className="text-label-caps text-muted-foreground mb-2 block">
+        <label
+          htmlFor="contact-nom"
+          className="text-label-caps text-muted-foreground mb-2 block"
+        >
           Nom complet
         </label>
         <input
+          id="contact-nom"
           {...register("nom")}
           type="text"
           placeholder="Jean Dupont"
+          autoComplete="name"
+          aria-invalid={!!errors.nom}
+          aria-describedby={errors.nom ? "error-nom" : undefined}
           className={inputClass}
         />
         {errors.nom && (
-          <p className="text-label-caps text-destructive mt-1">
+          <p
+            id="error-nom"
+            role="alert"
+            className="text-label-caps text-destructive mt-1"
+          >
             {errors.nom.message}
           </p>
         )}
       </div>
 
       <div>
-        <label className="text-label-caps text-muted-foreground mb-2 block">
+        <label
+          htmlFor="contact-email"
+          className="text-label-caps text-muted-foreground mb-2 block"
+        >
           Adresse e-mail
         </label>
         <input
+          id="contact-email"
           {...register("email")}
           type="email"
           placeholder="jean@exemple.com"
+          autoComplete="email"
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? "error-email" : undefined}
           className={inputClass}
         />
         {errors.email && (
-          <p className="text-label-caps text-destructive mt-1">
+          <p
+            id="error-email"
+            role="alert"
+            className="text-label-caps text-destructive mt-1"
+          >
             {errors.email.message}
           </p>
         )}
       </div>
 
       <div>
-        <label className="text-label-caps text-muted-foreground mb-2 block">
+        <label
+          htmlFor="contact-objet"
+          className="text-label-caps text-muted-foreground mb-2 block"
+        >
           Objet
         </label>
         <input
+          id="contact-objet"
           {...register("objet")}
           type="text"
           placeholder="Demande d'allocation / Partenariat"
+          aria-invalid={!!errors.objet}
+          aria-describedby={errors.objet ? "error-objet" : undefined}
           className={inputClass}
         />
         {errors.objet && (
-          <p className="text-label-caps text-destructive mt-1">
+          <p
+            id="error-objet"
+            role="alert"
+            className="text-label-caps text-destructive mt-1"
+          >
             {errors.objet.message}
           </p>
         )}
       </div>
 
       <div>
-        <label className="text-label-caps text-muted-foreground mb-2 block">
+        <label
+          htmlFor="contact-message"
+          className="text-label-caps text-muted-foreground mb-2 block"
+        >
           Message
         </label>
         <textarea
+          id="contact-message"
           {...register("message")}
           rows={6}
           placeholder="Décrivez votre demande..."
+          aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "error-message" : undefined}
           className={`${inputClass} resize-none`}
         />
         {errors.message && (
-          <p className="text-label-caps text-destructive mt-1">
+          <p
+            id="error-message"
+            role="alert"
+            className="text-label-caps text-destructive mt-1"
+          >
             {errors.message.message}
           </p>
         )}
@@ -117,9 +169,10 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
+        aria-disabled={isSubmitting}
         className="text-label-caps text-background bg-gold px-10 py-4 transition-opacity hover:opacity-90 disabled:opacity-50"
       >
-        {isSubmitting ? "Envoi..." : "Envoyer la communication"}
+        {isSubmitting ? "Envoi en cours…" : "Envoyer la communication"}
       </button>
     </form>
   );

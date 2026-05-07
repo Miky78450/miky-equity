@@ -30,22 +30,21 @@ const KPI_ITEMS = [
 
 const INSIGHTS = [
   {
-    category: "LETTRE TRIMESTRIELLE",
-    title: "La convexité de l'incertitude : naviguer les FVG au T4 2024.",
-    slug: "convexite-incertitude-t4-2024",
+    category: "STRATÉGIE",
+    title: "Pourquoi le NQ Futures est notre instrument de prédilection.",
+    slug: "pourquoi-le-nq-futures-est-notre-instrument-de-predilection",
     offset: "",
   },
   {
-    category: "DOCUMENT DE RECHERCHE",
-    title: "Pourquoi les Order Blocks sur NQ surperforment en session London.",
-    slug: "order-blocks-nq-session-london",
+    category: "ANALYSE TECHNIQUE",
+    title: "Anatomie d'un Fair Value Gap en Kill Zone.",
+    slug: "anatomie-dun-fair-value-gap-en-kill-zone",
     offset: "lg:mt-24",
   },
   {
-    category: "NOTE STRATÉGIQUE",
-    title:
-      "ICT vs Price Action classique : une analyse comparative sur 1607 trades.",
-    slug: "ict-vs-price-action-analyse",
+    category: "RISK MANAGEMENT",
+    title: "Gestion du drawdown : discipline vs. modèle.",
+    slug: "gestion-du-drawdown-discipline-vs-modele",
     offset: "lg:mt-12",
   },
 ];
