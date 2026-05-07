@@ -1,0 +1,21 @@
+{
+  "note": "Métriques calculées depuis les données intraday brutes (CSV 1 minute). Les données mensuelles de backtest.json ne capturent pas les creux intraday, d'où des divergences sur le Max Drawdown et le Sortino.",
+  "period": {
+    "start": "2018-01-31",
+    "end": "2026-05-31",
+    "months": 101,
+    "years": 8.2
+  },
+  "metrics": {
+    "cagr": 0.39,
+    "sharpe": 3.2,
+    "sortino": 5.12,
+    "maxDrawdown": -0.255,
+    "annualizedVolatility": 0.122,
+    "winRate": 0.593,
+    "totalTrades": 1607,
+    "initialCapital": 100000,
+    "finalCapital": 1517071,
+    "totalReturn": 14.17071
+  }
+}

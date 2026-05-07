@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Eyebrow } from "@/components/ui/typography";
 import backtestData from "@/data/backtest.json";
 import sp500Data from "@/data/sp500.json";
+import backtestMeta from "@/data/backtest-meta.json";
 import { calcAllMetrics } from "@/lib/finance";
 import { EquityCurve } from "@/components/charts/EquityCurve";
 import { DrawdownChart } from "@/components/charts/DrawdownChart";
@@ -11,7 +12,20 @@ import { ComparisonChart } from "@/components/charts/ComparisonChart";
 export const metadata: Metadata = { title: "Performance" };
 
 export default function PerformancePage() {
-  const metrics = calcAllMetrics(backtestData);
+  const calculated = calcAllMetrics(backtestData);
+
+  // Métriques issues des données brutes intraday (backtest-meta.json).
+  // calcAllMetrics() travaille sur snapshots mensuels : le Max Drawdown et
+  // le Sortino sont sous-estimés (creux intraday non capturés en mensuel).
+  const metrics = {
+    ...calculated,
+    cagr: backtestMeta.metrics.cagr,
+    sharpe: backtestMeta.metrics.sharpe,
+    sortino: backtestMeta.metrics.sortino,
+    maxDrawdown: backtestMeta.metrics.maxDrawdown,
+    annualizedVolatility: backtestMeta.metrics.annualizedVolatility,
+    winRate: backtestMeta.metrics.winRate,
+  };
 
   const KPIs = [
     { label: "CAGR ANNUEL", value: `+${(metrics.cagr * 100).toFixed(1)}%` },
@@ -31,7 +45,7 @@ export default function PerformancePage() {
     },
   ];
 
-  const totalTrades = backtestData.reduce((a, d) => a + d.trades, 0);
+  const totalTrades = backtestMeta.metrics.totalTrades;
 
   return (
     <main className="flex-1">
