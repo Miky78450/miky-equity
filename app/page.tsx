@@ -44,7 +44,7 @@ const INSIGHTS = [
     slug: "anatomie-dun-fair-value-gap-en-kill-zone",
     offset: "lg:mt-24",
     image:
-      "https://images.unsplash.com/photo-1642790551116-304d4bbf3f69?w=600&h=750&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=750&fit=crop&q=80",
   },
   {
     category: "RISK MANAGEMENT",
