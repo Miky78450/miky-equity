@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { label: "Portefeuille", href: "/portefeuille" },
   { label: "Stratégie", href: "/strategie" },
   { label: "Analyses", href: "/analyses" },
+  { label: "Équipe", href: "/equipe" },
   { label: "À Propos", href: "/a-propos" },
   { label: "Contact", href: "/contact" },
 ];

@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/portefeuille", label: "Portefeuille" },
   { href: "/strategie", label: "Stratégie" },
   { href: "/analyses", label: "Analyses" },
+  { href: "/equipe", label: "Équipe" },
   { href: "/contact", label: "Contact" },
 ];
 
